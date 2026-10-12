@@ -1,0 +1,387 @@
+/* load */
+/* From Uiverse.io by gustavofusco */ 
+.pencil {
+  display: block;
+  width: 10em;
+  height: 10em;
+}
+
+.pencil__body1,
+.pencil__body2,
+.pencil__body3,
+.pencil__eraser,
+.pencil__eraser-skew,
+.pencil__point,
+.pencil__rotate,
+.pencil__stroke {
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.pencil__body1,
+.pencil__body2,
+.pencil__body3 {
+  transform: rotate(-90deg);
+}
+
+.pencil__body1 {
+  animation-name: pencilBody1;
+}
+
+.pencil__body2 {
+  animation-name: pencilBody2;
+}
+
+.pencil__body3 {
+  animation-name: pencilBody3;
+}
+
+.pencil__eraser {
+  animation-name: pencilEraser;
+  transform: rotate(-90deg) translate(49px,0);
+}
+
+.pencil__eraser-skew {
+  animation-name: pencilEraserSkew;
+  animation-timing-function: ease-in-out;
+}
+
+.pencil__point {
+  animation-name: pencilPoint;
+  transform: rotate(-90deg) translate(49px,-30px);
+}
+
+.pencil__rotate {
+  animation-name: pencilRotate;
+}
+
+.pencil__stroke {
+  animation-name: pencilStroke;
+  transform: translate(100px,100px) rotate(-113deg);
+}
+
+/* Animations */
+@keyframes pencilBody1 {
+  from,
+	to {
+    stroke-dashoffset: 351.86;
+    transform: rotate(-90deg);
+  }
+
+  50% {
+    stroke-dashoffset: 150.8;
+ /* 3/8 of diameter */
+    transform: rotate(-225deg);
+  }
+}
+
+@keyframes pencilBody2 {
+  from,
+	to {
+    stroke-dashoffset: 406.84;
+    transform: rotate(-90deg);
+  }
+
+  50% {
+    stroke-dashoffset: 174.36;
+    transform: rotate(-225deg);
+  }
+}
+
+@keyframes pencilBody3 {
+  from,
+	to {
+    stroke-dashoffset: 296.88;
+    transform: rotate(-90deg);
+  }
+
+  50% {
+    stroke-dashoffset: 127.23;
+    transform: rotate(-225deg);
+  }
+}
+
+@keyframes pencilEraser {
+  from,
+	to {
+    transform: rotate(-45deg) translate(49px,0);
+  }
+
+  50% {
+    transform: rotate(0deg) translate(49px,0);
+  }
+}
+
+@keyframes pencilEraserSkew {
+  from,
+	32.5%,
+	67.5%,
+	to {
+    transform: skewX(0);
+  }
+
+  35%,
+	65% {
+    transform: skewX(-4deg);
+  }
+
+  37.5%, 
+	62.5% {
+    transform: skewX(8deg);
+  }
+
+  40%,
+	45%,
+	50%,
+	55%,
+	60% {
+    transform: skewX(-15deg);
+  }
+
+  42.5%,
+	47.5%,
+	52.5%,
+	57.5% {
+    transform: skewX(15deg);
+  }
+}
+
+@keyframes pencilPoint {
+  from,
+	to {
+    transform: rotate(-90deg) translate(49px,-30px);
+  }
+
+  50% {
+    transform: rotate(-225deg) translate(49px,-30px);
+  }
+}
+
+@keyframes pencilRotate {
+  from {
+    transform: translate(100px,100px) rotate(0);
+  }
+
+  to {
+    transform: translate(100px,100px) rotate(720deg);
+  }
+}
+
+@keyframes pencilStroke {
+  from {
+    stroke-dashoffset: 439.82;
+    transform: translate(100px,100px) rotate(-113deg);
+  }
+
+  50% {
+    stroke-dashoffset: 164.93;
+    transform: translate(100px,100px) rotate(-113deg);
+  }
+
+  75%,
+	to {
+    stroke-dashoffset: 439.82;
+    transform: translate(100px,100px) rotate(112deg);
+  }
+}
+
+.screen{
+    display: none;
+}
+
+.screen.active{
+   display: block;
+}
+
+/* fin load */
+
+/* debut start */
+
+h1{
+    margin-bottom: 30px;
+}
+
+/* From Uiverse.io by AatreyuShau */ 
+a {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  background-color: transparent;
+  filter: url(#handDrawnNoise);
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  font-family: "Courier New", monospace;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 7px 14px;
+  border-width: 0px;
+  border-radius: 2rem;
+  box-shadow: #33333366 4px 4px 0 1px;
+  animation: idle 1s infinite ease-in-out;
+}
+
+.highlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: rgba(255, 225, 0, 0.5);
+  stroke: rgba(255, 225, 0, 0.5); /* Yellow highlighter */
+  stroke-width: 10;
+  stroke-linecap: round;
+  pointer-events: none;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  transition: stroke-dashoffset 0.5s ease-in-out;
+}
+
+@keyframes idle {
+  0% {
+    filter: url(#handDrawnNoise);
+  }
+  50% {
+    rotate: 2.5deg;
+    filter: url(#handDrawnNoise2);
+  }
+  100% {
+    filter: url(#handDrawnNoise);
+  }
+}
+
+.a-cosm {
+  fill: #33333366;
+  transition: 0.3s ease-out;
+  scale: 0.5;
+  position: absolute;
+  translate: calc(-100% + 24px) 1.5rem;
+}
+
+a:hover {
+  font-weight: bold;
+  border-width: 0px;
+  border-radius: 2rem;
+}
+
+a:hover {
+  font-weight: bold;
+  border-width: 0px;
+  border-radius: 2rem;
+  rotate: -2.5deg;
+  animation: hover 2.5s infinite ease-in-out;
+}
+
+a:hover .highlight {
+  stroke-dashoffset: 0;
+}
+
+a:active .highlight {
+  stroke-dashoffset: 1000;
+  animation:
+    highlight 5s infinite,
+    col 0.5s forwards;
+  stroke: #bc4e2666;
+}
+
+@keyframes col {
+  0% {
+    stroke: rgba(255, 225, 0, 0.5);
+  }
+  100% {
+    stroke: #1c98eb66;
+  }
+}
+
+@keyframes highlight {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  25% {
+    stroke-dashoffset: 1000;
+  }
+  50% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes hover {
+  0% {
+    rotate: 0deg;
+    filter: url(#handDrawnNoise);
+    translate: 0 0px;
+  }
+  25% {
+    rotate: -1deg;
+    filter: url(#handDrawnNoise2);
+    translate: 0 -2px;
+  }
+  50% {
+    rotate: 0deg;
+    filter: url(#handDrawnNoise);
+    translate: 0 2px;
+  }
+  75% {
+    rotate: -1deg;
+    filter: url(#handDrawnNoise2);
+    translate: 0 -2px;
+  }
+  100% {
+    rotate: 0deg;
+    filter: url(#handDrawnNoise);
+    translate: 0 0px;
+  }
+}
+
+.a:hover .a-cosm {
+  rotate: -15deg;
+  translate: calc(-100% + 22px) 1.9rem;
+}
+
+.a:active .a-cosm {
+  fill: #333333f1;
+  rotate: -135deg;
+  translate: calc(-100% + 55px) 1.6rem;
+  animation: none;
+}
+
+.a:active {
+  font-weight: bold;
+  border-width: 0px;
+  border-radius: 2rem;
+  box-shadow: inset #333333f1 4px 4px 0 1px;
+  rotate: -2.5deg;
+  animation: active 1s infinite ease-in-out;
+}
+
+@keyframes active {
+  0% {
+    filter: url(#handDrawnNoiset);
+    translate: 0 -1px;
+  }
+  25% {
+    rotate: -3deg;
+  }
+  50% {
+    filter: url(#handDrawnNoiset2);
+    translate: 0 1px;
+  }
+  66% {
+    rotate: 1.5deg;
+  }
+  100% {
+    filter: url(#handDrawnNoiset);
+    translate: 0 -1px;
+  }
+}
+
+
+/* fin start */
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="reset.css">
+  
+    <title>Sport</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="header screen active" id="header">
+           <h3>Quiz App</h3>
+           <h3>Score: <span id="score"></span></h3>
+        </div>
+        <div class="content screen active" id="content">
+            <h2 id="qst"></h2>
+            <div id="answers" >
+
+            </div>
+        </div>
+        <div class="footer screen active" id="footer">
+            <h3><span id="num_qts"></span> of 10 Question</h3>
+            <div class="progress screen active" id="progress">
+                <progress value="0" min="0" max="100" id="pro"></progress>
+            </div>
+        </div>
+        <div class="res screen" id="res">
+            <h3 id="final_score"></h3>
+            <h3 id="observe"></h3>
+            <button onclick="restart()" id="restart">restart</button>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>

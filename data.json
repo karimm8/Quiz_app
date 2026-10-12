@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "question": "Combien de joueurs composent une équipe de football sur le terrain ?",
+    "options": [
+      "9 joueurs",
+      "10 joueurs",
+      "11 joueurs",
+      "12 joueurs"
+    ],
+    "answer": "11 joueurs"
+  },
+  {
+    "id": 2,
+    "question": "Combien de joueurs composent une équipe de basketball sur le terrain ?",
+    "options": [
+      "4 joueurs",
+      "5 joueurs",
+      "6 joueurs",
+      "7 joueurs"
+    ],
+    "answer": "5 joueurs"
+  },
+  {
+    "id": 3,
+    "question": "Quel pays a remporté la Coupe du Monde de football 2018 ?",
+    "options": [
+      "Brésil",
+      "Allemagne",
+      "France",
+      "Espagne"
+    ],
+    "answer": "France"
+  },
+  {
+    "id": 4,
+    "question": "Combien de sets faut-il généralement gagner pour remporter un match de tennis masculin en Grand Chelem ?",
+    "options": [
+      "2 sets",
+      "3 sets",
+      "4 sets",
+      "5 sets"
+    ],
+    "answer": "3 sets"
+  },
+  {
+    "id": 5,
+    "question": "Quel sport utilise un volant ?",
+    "options": [
+      "Tennis",
+      "Badminton",
+      "Volley-ball",
+      "Rugby"
+    ],
+    "answer": "Badminton"
+  },
+  {
+    "id": 6,
+    "question": "Dans quel sport utilise-t-on un ballon ovale ?",
+    "options": [
+      "Football",
+      "Tennis",
+      "Rugby",
+      "Handball"
+    ],
+    "answer": "Rugby"
+  },
+  {
+    "id": 7,
+    "question": "Combien de minutes dure un match de football professionnel, sans prolongation ?",
+    "options": [
+      "60 minutes",
+      "80 minutes",
+      "90 minutes",
+      "120 minutes"
+    ],
+    "answer": "90 minutes"
+  },
+  {
+    "id": 8,
+    "question": "Quel sport est associé au Tour de France ?",
+    "options": [
+      "Natation",
+      "Cyclisme",
+      "Athlétisme",
+      "Boxe"
+    ],
+    "answer": "Cyclisme"
+  },
+  {
+    "id": 9,
+    "question": "Quel sport se pratique dans une piscine ?",
+    "options": [
+      "Natation",
+      "Golf",
+      "Judo",
+      "Cyclisme"
+    ],
+    "answer": "Natation"
+  },
+  {
+    "id": 10,
+    "question": "Combien de points vaut un tir réussi derrière la ligne à trois points au basketball ?",
+    "options": [
+      "1 point",
+      "2 points",
+      "3 points",
+      "4 points"
+    ],
+    "answer": "3 points"
+  }
+]
